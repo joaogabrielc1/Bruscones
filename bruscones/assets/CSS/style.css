@@ -1,0 +1,228 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.navbar {
+    background-color: rgb(253, 83, 83);
+    display: flex;                      /* Usa flexbox para alinhar os elementos lado a lado */
+    align-items: center;
+    justify-content: space-between;     /* Coloca o logo à esquerda e os links à direita */
+    padding: 10px 20px;                 /* Espaçamento interno: 10px em cima/baixo, 20px nas laterais */
+}
+
+.navbar .logo {
+    font-size: 38px;
+    color: white;
+    font-weight: bold; /* Deixa o texto em negrito */
+    animation: vir-esquerda 1s ease-out;
+}
+
+.nav-links {
+    list-style: none; /* Remove os marcadores da lista (bolinhas) */
+    display: flex;    /* Coloca os itens da lista em linha horizontal */
+    gap: 20px;        /* Espaço de 20px entre cada item do menu */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: white;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+.hero {
+    background-color: rgb(255, 114, 114);
+    display: flex;                        /* Usa flexbox para organizar os elementos */
+    flex-direction: column;               /* Empilha os elementos verticalmente */
+    align-items: center;
+    padding: 40px 20px;                   /* Espaçamento interno: 40px em cima/baixo, 20px nas laterais */
+}
+
+.hero h1 {
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;           /* Espaço de 20px abaixo do título */
+    animation: descer 1s ease-out;
+}
+
+.hero img {
+    width: 460px;                 /* Largura */
+    height: 360px;                /* Altura */
+    border-radius: 15%;
+    object-fit: cover;            /* Corta a imagem para preencher o espaço sem distorcer */
+    animation: subir 1s ease-out;
+}
+
+.hero p {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;                   /* Espaço de 20px acima do parágrafo */
+    animation: subir 1s ease-out 0.3s both;
+}
+
+.hero button {
+    background-color: rgb(253, 83, 83);
+    color: white;
+    border: none;                           /* Remove a borda padrão do botão */
+    padding: 10px 20px;                     /* Espaçamento interno do botão */
+    font-size: 18px;
+    cursor: pointer;                        /* Muda o cursor para mãozinha ao passar sobre o botão */
+    margin-top: 20px;                       /* Espaço de 20px acima do botão */
+    border-radius: 5px;
+    animation: subir 1s ease-out 0.6s both;
+}
+
+.hero button:hover {
+    background-color: rgb(220, 60, 60); /* Escurece o vermelho ao passar o mouse */
+}
+
+@keyframes vir-esquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes descer {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#produtos {
+    padding: 40px 20px; /* Espaçamento interno da seção */
+}
+
+#produtos h2 {
+    font-size: 36px;
+    text-align: center;
+    color: rgb(253, 83, 83);
+    margin-bottom: 30px;     /* Espaço abaixo do título antes dos cards */
+}
+
+.container {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    margin: 0 auto;    /* Centraliza o container na página */
+}
+
+.grid-produtos {
+    display: flex;           /* Coloca os cards lado a lado */
+    gap: 20px;               /* Espaço de 20px entre os cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    flex-wrap: wrap;         /* Quebra para a linha de baixo se não couber na tela */
+}
+
+.card {
+    background: #f5f5f5;
+    padding: 15px;                  /* Espaçamento interno do card */
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    font-size: large;               /* Tamanho de fonte grande */
+    animation: vir-esquerda 2s ease-out;
+}
+
+.card p {
+    display: none;    /* Esconde o texto de descrição enquanto o mouse não está sobre o card */
+    font-size: 13px;
+    margin-top: 8px;  /* Pequeno espaço acima do texto */
+}
+
+.card:hover p {
+    display: block; /* Exibe o texto de descrição ao passar o mouse */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;        /* A imagem ocupa toda a largura do card */
+    height: auto;       /* Altura proporcional para não distorcer */
+    margin-top: 10px;   /* Espaço de 10px entre o texto e a imagem */
+    border-radius: 8px;
+}
+
+#quem-somos {
+    background-color: rgb(255, 114, 114);
+    padding: 40px 20px;                   /* Espaçamento interno da seção */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#quem-somos h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-top: 30px;    /* Espaço acima do título (separa dos parágrafos anteriores) */
+}
+
+#quem-somos p {
+    font-size: 15px;
+    text-align: center;
+    max-width: 900px;         /* Limita a largura para não ficar muito largo em telas grandes */
+    margin: 0 auto 20px auto; /* Centraliza o parágrafo e adiciona espaço abaixo */
+    line-height: 1.7;         /* Espaçamento entre linhas para melhorar a leitura */
+}
+
+#contato {
+    background-color: rgb(253, 83, 83);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;                 /* Espaçamento interno da seção */
+    font-size: 18px;
+}
+
+#contato h2 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.contato {
+    list-style: none;
+}
+
+.contato li {
+    margin: 8px 0;
+}
+
+footer {
+    background-color: rgb(200, 50, 50);
+    color: white;
+    text-align: center;
+    padding: 20px;                      /* Espaçamento interno do rodapé */
+    font-size: 14px
+}
