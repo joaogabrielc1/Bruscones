@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -11,56 +10,57 @@ body {
 
 .navbar {
     background-color: rgb(253, 83, 83);
-    display: flex;                      /* Usa flexbox para alinhar os elementos lado a lado */
+    display: flex;
     align-items: center;
-    justify-content: space-between;     /* Coloca o logo à esquerda e os links à direita */
-    padding: 10px 20px;                 /* Espaçamento interno: 10px em cima/baixo, 20px nas laterais */
+    justify-content: space-between;     /*logo à esquerda e os links à direita */
+    padding: 6px 20px;
+    height: 60px;
 }
 
 .navbar .logo {
-    font-size: 38px;
+    width: auto;
+    height: 160px; 
+    display: flex;
     color: white;
-    font-weight: bold; /* Deixa o texto em negrito */
+    font-weight: bold;
     animation: vir-esquerda 1s ease-out;
 }
 
 .nav-links {
-    list-style: none; /* Remove os marcadores da lista (bolinhas) */
-    display: flex;    /* Coloca os itens da lista em linha horizontal */
-    gap: 20px;        /* Espaço de 20px entre cada item do menu */
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    text-decoration: none; /* Remove o sublinhado */
     color: white;
     font-size: 16px;
 }
 
 .nav-links a:hover {
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    text-decoration: underline; /* Sublinha o link */
 }
 
 .hero {
     background-color: rgb(255, 114, 114);
-    display: flex;                        /* Usa flexbox para organizar os elementos */
-    flex-direction: column;               /* Empilha os elementos verticalmente */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 40px 20px;                   /* Espaçamento interno: 40px em cima/baixo, 20px nas laterais */
+    padding: 40px 20px;
 }
 
 .hero h1 {
     font-size: 48px;
     text-align: center;
     color: white;
-    margin-bottom: 20px;           /* Espaço de 20px abaixo do título */
+    margin-bottom: 20px;
     animation: descer 1s ease-out;
 }
 
 .hero img {
-    width: 460px;                 /* Largura */
-    height: 360px;                /* Altura */
-    border-radius: 15%;
-    object-fit: cover;            /* Corta a imagem para preencher o espaço sem distorcer */
+    width: 860px;
+    height: 400px;
     animation: subir 1s ease-out;
 }
 
@@ -68,24 +68,24 @@ body {
     font-size: 24px;
     text-align: center;
     color: white;
-    margin-top: 20px;                   /* Espaço de 20px acima do parágrafo */
+    margin-top: 20px;
     animation: subir 1s ease-out 0.3s both;
 }
 
 .hero button {
     background-color: rgb(253, 83, 83);
     color: white;
-    border: none;                           /* Remove a borda padrão do botão */
-    padding: 10px 20px;                     /* Espaçamento interno do botão */
+    border: none;
+    padding: 10px 20px;
     font-size: 18px;
-    cursor: pointer;                        /* Muda o cursor para mãozinha ao passar sobre o botão */
-    margin-top: 20px;                       /* Espaço de 20px acima do botão */
+    cursor: pointer;
+    margin-top: 20px;
     border-radius: 5px;
     animation: subir 1s ease-out 0.6s both;
 }
 
 .hero button:hover {
-    background-color: rgb(220, 60, 60); /* Escurece o vermelho ao passar o mouse */
+    background-color: rgb(220, 60, 60);
 }
 
 @keyframes vir-esquerda {
@@ -122,46 +122,41 @@ body {
 }
 
 #produtos {
-    padding: 40px 20px; /* Espaçamento interno da seção */
+    padding: 40px 20px; /* Espaçamento interno */
 }
 
 #produtos h2 {
     font-size: 36px;
     text-align: center;
     color: rgb(253, 83, 83);
-    margin-bottom: 30px;     /* Espaço abaixo do título antes dos cards */
-}
-
-.container {
-    max-width: 1200px; /* Limita a largura máxima do conteúdo */
-    margin: 0 auto;    /* Centraliza o container na página */
+    margin-bottom: 30px;     /* Espaço embaixo do título antes dos cards */
 }
 
 .grid-produtos {
-    display: flex;           /* Coloca os cards lado a lado */
-    gap: 20px;               /* Espaço de 20px entre os cards */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    flex-wrap: wrap;         /* Quebra para a linha de baixo se não couber na tela */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
     background: #f5f5f5;
-    padding: 15px;                  /* Espaçamento interno do card */
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
     width: 200px;
-    font-size: large;               /* Tamanho de fonte grande */
+    font-size: large;
     animation: vir-esquerda 2s ease-out;
 }
 
 .card p {
-    display: none;    /* Esconde o texto de descrição enquanto o mouse não está sobre o card */
+    display: none;
     font-size: 13px;
-    margin-top: 8px;  /* Pequeno espaço acima do texto */
+    margin-top: 8px;
 }
 
 .card:hover p {
-    display: block; /* Exibe o texto de descrição ao passar o mouse */
+    display: block;
 }
 
 .card:hover {
@@ -170,15 +165,15 @@ body {
 }
 
 .card img {
-    width: 100%;        /* A imagem ocupa toda a largura do card */
-    height: auto;       /* Altura proporcional para não distorcer */
-    margin-top: 10px;   /* Espaço de 10px entre o texto e a imagem */
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
     border-radius: 8px;
 }
 
 #quem-somos {
     background-color: rgb(255, 114, 114);
-    padding: 40px 20px;                   /* Espaçamento interno da seção */
+    padding: 40px 20px;
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -186,29 +181,28 @@ body {
 #quem-somos h2 {
     font-size: 36px;
     text-align: center;
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    margin-top: 30px;    /* Espaço acima do título (separa dos parágrafos anteriores) */
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 #quem-somos p {
     font-size: 15px;
     text-align: center;
-    max-width: 900px;         /* Limita a largura para não ficar muito largo em telas grandes */
-    margin: 0 auto 20px auto; /* Centraliza o parágrafo e adiciona espaço abaixo */
-    line-height: 1.7;         /* Espaçamento entre linhas para melhorar a leitura */
+    margin: 0 auto 20px auto; /* Centraliza o parágrafo e adiciona espaço embaixo */
+    line-height: 1.7;
 }
 
 #contato {
     background-color: rgb(253, 83, 83);
     color: white;
     text-align: center;
-    padding: 40px 20px;                 /* Espaçamento interno da seção */
+    padding: 40px 20px;
     font-size: 18px;
 }
 
 #contato h2 {
     font-size: 36px;
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-bottom: 20px;
 }
 
 .contato {
@@ -223,6 +217,6 @@ footer {
     background-color: rgb(200, 50, 50);
     color: white;
     text-align: center;
-    padding: 20px;                      /* Espaçamento interno do rodapé */
+    padding: 20px;
     font-size: 14px
 }
